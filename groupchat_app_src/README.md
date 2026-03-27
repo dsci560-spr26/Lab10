@@ -1,10 +1,10 @@
-Group Chat Web App + LLM Bot (Ollama Integration)
+# Group Chat Web App + LLM Bot (Ollama Integration)
 
 FastAPI + MySQL + vanilla HTML/JS group chat with an integrated LLM bot. This project has been upgraded to use a self-hosted Ollama server instead of llama.cpp for better stability and performance.
 
-Quick Start (Dev Environment)
+## Quick Start (Dev Environment)
 
-1. Database Setup (MySQL)
+### 1. Database Setup (MySQL)
 
 Ensure MySQL is running on your machine. Create the database and user:
 
@@ -14,7 +14,7 @@ GRANT ALL PRIVILEGES ON groupchat.* TO 'chatuser'@'localhost';
 FLUSH PRIVILEGES;
 
 
-2. Backend Setup
+### 2. Backend Setup
 
 Navigate to the backend directory and set up the Python virtual environment:
 
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 pip install httpx  # Required for LLM API connection
 
 
-3. Environment Variables
+### 3. Environment Variables
 
 Create a new .env file inside the backend directory (do NOT commit this file to version control) and add the following configuration:
 
@@ -38,7 +38,7 @@ APP_HOST=0.0.0.0
 APP_PORT=8000
 
 
-4. LLM Bot Setup (Ollama)
+### 4. LLM Bot Setup (Ollama)
 
 This project uses Ollama to host the LLM locally.
 
@@ -54,7 +54,7 @@ Start the Ollama service in a separate terminal:
 ollama serve
 
 
-5. Run the Application
+### 5. Run the Application
 
 Start the FastAPI backend server:
 
@@ -63,7 +63,7 @@ python -m uvicorn app:app --host 0.0.0.0 --port 8000
 
 Open http://localhost:8000 in your browser. Any message ending with a ? will automatically trigger the LLM Bot to reply in the chat.
 
-Part 2: Android TWA (For Mobile Developers)
+## Part 2: Android TWA (For Mobile Developers)
 
 To build the Android Trusted Web Activity (TWA):
 
